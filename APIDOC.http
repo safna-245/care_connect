@@ -1,0 +1,41 @@
+#api call for list all doctors
+###
+GET http://127.0.0.1:8000/doctors/
+Accept: application/json
+
+#api call for adding doctor
+###
+POST http://127.0.0.1:8000/doctors/
+Content-Type: application/json
+
+{
+    "name":"Anu",
+    "specialization":"General Medicine / Internal Medicine",
+    "fee":350,
+    "qualification":"MBBS",
+    "email":"anu03@gmail.com"
+}
+
+#api call for fetch doctor
+###
+GET http://127.0.0.1:8000/doctors/3/
+Accept: application/json
+
+#api call for update doctor
+###
+PUT http://127.0.0.1:8000/doctors/3/
+Content-Type: application/json
+
+{
+    "id":3,
+    "name":"sreekumar",
+    "specialization":"radiology",
+    "fee":400,
+    "qualification":"MBBS,MD",
+    "email":"sreekumar123@gmail.com"
+}
+
+#api call for delete doctor
+###
+DELETE http://127.0.0.1:8000/doctors/5/
+Accept: application/json
