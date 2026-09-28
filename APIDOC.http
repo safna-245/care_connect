@@ -61,7 +61,7 @@ Content-Type: application/json
 
 #api call for fetch doctor
 ###
-GET http://127.0.0.1:8000/v2/doctors/3/
+GET http://127.0.0.1:8000/v2/doctors/2/
 Accept: application/json
 
 #api call for delete doctor
