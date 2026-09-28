@@ -39,3 +39,33 @@ Content-Type: application/json
 ###
 DELETE http://127.0.0.1:8000/doctors/5/
 Accept: application/json
+
+#v2 endpoints
+#api call for list all doctors
+###
+GET http://127.0.0.1:8000/v2/doctors/
+Accept: application/json
+
+#api call for adding doctor
+###
+POST http://127.0.0.1:8000/v2/doctors/
+Content-Type: application/json
+
+{
+    "name":"George",
+    "specialization":"cardiology",
+    "fee":350,
+    "qualification":"MBBS",
+    "email":"george@gmail.com"
+}
+
+#api call for fetch doctor
+###
+GET http://127.0.0.1:8000/v2/doctors/3/
+Accept: application/json
+
+#api call for delete doctor
+###
+DELETE http://127.0.0.1:8000/v2/doctors/7/
+Accept: application/json
+
