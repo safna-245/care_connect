@@ -61,11 +61,35 @@ Content-Type: application/json
 
 #api call for fetch doctor
 ###
-GET http://127.0.0.1:8000/v2/doctors/2/
+GET http://127.0.0.1:8000/v2/doctors/3/
 Accept: application/json
+
+#api call for update doctor
+###
+PUT http://127.0.0.1:8000/v2/doctors/3/
+Content-Type: application/json
+
+{
+  "id": 2,
+  "name": "Arun Kumar",
+  "specialization": "dermatology",
+  "fee":300,
+  "qualification": "MBBS",
+  "email": "arun8@gmail.com"
+}
 
 #api call for delete doctor
 ###
 DELETE http://127.0.0.1:8000/v2/doctors/7/
 Accept: application/json
 
+#api call for create admin
+###
+POST http://127.0.0.1:8000/v2/admin-register/
+Content-Type: application/json
+
+{
+    "username":"superuser",
+    "email":"superuser@gmail.com",
+    "password":"superuser"
+}

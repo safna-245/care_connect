@@ -16,4 +16,25 @@ class DoctorSerializer(serializers.Serializer):
 
     email = serializers.EmailField()
 
+    def validate(self, validated_data):
+
+        fee = validated_data.get("fee")
+
+        if fee < 250:
+
+            raise serializers.ValidationError("invalid fee, fee should be greater than 250")
+
+        return validated_data
+
+class UserSerializer(serializers.Serializer):
+
+    username = serializers.CharField()
+
+    email = serializers.EmailField()
+
+    password = serializers.CharField()
+
+
+       
+
 

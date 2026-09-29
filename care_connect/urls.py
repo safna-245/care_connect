@@ -24,5 +24,6 @@ urlpatterns = [
     path('doctors/',DoctorListCreateView.as_view()),
     path('doctors/<int:pk>/',DoctorRetrieveUpdateDeleteView.as_view()),
     path('v2/doctors/',views.DoctorListCreateView.as_view()),
-    path('v2/doctors/<int:pk>/', views.DoctorRetrieveUpdateDeleteView.as_view())
+    path('v2/doctors/<int:pk>/', views.DoctorRetrieveUpdateDeleteView.as_view()),
+    path('v2/admin-register/',views.AdminRegisterView.as_view()),
 ]
