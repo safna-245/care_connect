@@ -44,6 +44,10 @@ class DoctorListCreateView(APIView):
             return Response(data=serializer_instance.errors)
 
 class DoctorRetrieveUpdateDeleteView(APIView):
+     
+    authentication_classes = [authentication.BasicAuthentication]
+    permission_classes = [permissions.IsAdminUser]
+         
 
     def get(self,request,pk=None):
 
